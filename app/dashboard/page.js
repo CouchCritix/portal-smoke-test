@@ -1,133 +1,78 @@
-import Link from "next/link";
-
-export default function Home() {
+export default function Dashboard() {
   return (
-    <main style={{ minHeight: "100vh", background: "#f9fafb" }}>
-      <div style={{ maxWidth: 960, margin: "0 auto", padding: "3rem 1.5rem" }}>
-        
-        {/* Header / Hero */}
-        <header style={{ marginBottom: "2rem" }}>
-          <span
-            style={{
-              display: "inline-block",
-              padding: "4px 10px",
-              borderRadius: 999,
-              background: "#eef2ff",
-              color: "#3730a3",
-              fontSize: 12,
-              fontWeight: 600,
-              letterSpacing: 0.4
-            }}
-          >
-            Beta Preview
-          </span>
-          <h1
-            style={{
-              fontSize: "2.25rem",
-              lineHeight: 1.2,
-              margin: "0.75rem 0 0.5rem",
-              color: "#111827"
-            }}
-          >
-            Employer Portal
-          </h1>
-          <p style={{ color: "#4b5563", fontSize: 16, maxWidth: 720 }}>
-            A simple portal for employers and business owners to manage compliance tasks and key documents.
-          </p>
-        </header>
+    <main
+      style={{
+        minHeight: "100vh",
+        background: "#f9fafb",
+        padding: "3rem 1.5rem",
+        fontFamily: "system-ui, sans-serif"
+      }}
+    >
+      <div style={{ maxWidth: 960, margin: "0 auto" }}>
+        <h1
+          style={{
+            fontSize: "2rem",
+            fontWeight: "bold",
+            marginBottom: "1.5rem",
+            color: "#111827"
+          }}
+        >
+          Employer Dashboard
+        </h1>
 
-        {/* Callouts */}
+        {/* Compliance Tasks Section */}
         <section
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: 16,
+            background: "#fff",
+            border: "1px solid #e5e7eb",
+            borderRadius: 12,
+            padding: 20,
             marginBottom: 24
           }}
         >
-          <div
+          <h2
             style={{
-              background: "#fff",
-              border: "1px solid #e5e7eb",
-              borderRadius: 12,
-              padding: 16
+              fontSize: "1.25rem",
+              fontWeight: 600,
+              marginBottom: "0.75rem",
+              color: "#111827"
             }}
           >
-            <h3 style={{ margin: "0 0 6px", fontSize: 14, color: "#111827" }}>
-              What’s inside
-            </h3>
-            <ul
-              style={{
-                margin: 0,
-                paddingLeft: 18,
-                color: "#374151",
-                fontSize: 14,
-                lineHeight: 1.7
-              }}
-            >
-              <li>Compliance task checklist</li>
-              <li>Core document links</li>
-              <li>Clean, beta-friendly UI</li>
-            </ul>
-          </div>
-          <div
-            style={{
-              background: "#fff",
-              border: "1px solid #e5e7eb",
-              borderRadius: 12,
-              padding: 16
-            }}
-          >
-            <h3 style={{ margin: "0 0 6px", fontSize: 14, color: "#111827" }}>
-              Coming soon
-            </h3>
-            <ul
-              style={{
-                margin: 0,
-                paddingLeft: 18,
-                color: "#374151",
-                fontSize: 14,
-                lineHeight: 1.7
-              }}
-            >
-              <li>Login & roles</li>
-              <li>Subscriptions & billing</li>
-              <li>Admin content management</li>
-            </ul>
-          </div>
+            Compliance Tasks
+          </h2>
+          <ul style={{ paddingLeft: 18, lineHeight: 1.8, color: "#374151" }}>
+            <li>✔ Wage Theft Prevention Notice provided to new hires</li>
+            <li>✔ Harassment Prevention Training tracked</li>
+            <li>✔ Meal/Rest Break policy acknowledged and posted</li>
+            <li>✔ Paystub compliance spot-check complete</li>
+          </ul>
         </section>
 
-        {/* CTAs */}
-        <div style={{ display: "flex", gap: 12 }}>
-          <Link
-            href="/dashboard"
+        {/* Documents Section */}
+        <section
+          style={{
+            background: "#fff",
+            border: "1px solid #e5e7eb",
+            borderRadius: 12,
+            padding: 20
+          }}
+        >
+          <h2
             style={{
-              textDecoration: "none",
-              background: "#111827",
-              color: "#fff",
-              padding: "10px 16px",
-              borderRadius: 10,
-              fontWeight: 600
+              fontSize: "1.25rem",
+              fontWeight: 600,
+              marginBottom: "0.75rem",
+              color: "#111827"
             }}
           >
-            Open Dashboard
-          </Link>
-
-          <a
-            href="#"
-            style={{
-              textDecoration: "none",
-              background: "#fff",
-              color: "#111827",
-              padding: "10px 16px",
-              borderRadius: 10,
-              border: "1px solid #e5e7eb",
-              fontWeight: 600
-            }}
-          >
-            Request Access
-          </a>
-        </div>
+            Documents
+          </h2>
+          <ul style={{ paddingLeft: 18, lineHeight: 1.8, color: "#374151" }}>
+            <li><a href="#" style={{ color: "#2563eb" }}>Employee Handbook.pdf</a></li>
+            <li><a href="#" style={{ color: "#2563eb" }}>Meal & Rest Break Policy.docx</a></li>
+            <li><a href="#" style={{ color: "#2563eb" }}>Workplace Safety Checklist.xlsx</a></li>
+          </ul>
+        </section>
       </div>
     </main>
   );
